@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Dashboard | SRM System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.10/tailwind.min.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-xl font-bold">SRM System</h1>
+            <div class="space-x-4">
+                <span class="text-white">Welcome, <span id="profileUserName"></span></span>
+                <a href="/users/logout" class="text-white hover:text-gray-200" onclick="sessionStorage.clear()">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex">
+        <aside class="w-64 bg-white h-screen shadow-md">
+            <div class="p-4">
+                <nav class="space-y-2">
+                    <a href="#" class="block p-2 text-blue-800 hover:bg-blue-50 rounded">Student Records</a>
+                    <a href="#" class="block p-2 text-blue-800 hover:bg-blue-50 rounded">Issue Certificates</a>
+                    <a href="#" class="block p-2 text-blue-800 hover:bg-blue-50 rounded">Verify Documents</a>
+                    <a href="#" class="block p-2 text-blue-800 hover:bg-blue-50 rounded">Institution Profile</a>
+                </nav>
+            </div>
+        </aside>
+        <main class="flex-1 p-8">
+            <h2 class="text-2xl font-bold mb-6">Institution Dashboard</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Total Students</h3>
+                    <p class="text-3xl text-blue-800">5,678</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Certificates Issued</h3>
+                    <p class="text-3xl text-blue-800">1,234</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Pending Verifications</h3>
+                    <p class="text-3xl text-blue-800">45</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/script/util.js"></script>
+</body>
+</html>
